@@ -1,0 +1,22 @@
+{
+  "name": "node-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "基于node/ts的后台接口模板",
+  "repository": "git@github.com:HPLWC/node-service.git",
+  "author": "hplwc <935151619@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.6",
+    "@types/koa-router": "^7.4.1",
+    "typescript": "^4.1.2"
+  }
+}
