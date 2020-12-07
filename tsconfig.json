@@ -1,20 +1,28 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2019",
     "module": "commonjs",
     "allowJs": true,
     "lib": [
-      "es6",
-      "es7"
+      "ES2019"
     ],
     "outDir": "./dist",
-    "strict": true,
-    "alwaysStrict": true,
+    "removeComments": true,
     "types": [
       "node"
     ],
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true
+  },
+  "include": ["src/**/*"]
 }
