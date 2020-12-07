@@ -5,8 +5,17 @@
 ## 依赖安装
 yarn install
 
+## 开发运行
+yarn dev
+
 ## 打包
 yarn build
+
+## 打包运行
+yarn start
+
+## 规范检测
+yarn lint
 ```
 
 
