@@ -7,8 +7,10 @@
   "author": "hplwc <935151619@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npx tsc && node dist/index.js",
-    "build": "npx tsc"
+    "dev": "npx nodemon --exec ts-node src/index.ts",
+    "start": "yarn install && yarn build && node dist/index.js",
+    "build": "yarn lint && npx tsc",
+    "lint": "npx eslint src --ext .ts,.tsx,.js"
   },
   "dependencies": {
     "koa": "^2.13.0",
@@ -20,6 +22,8 @@
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
     "eslint": "^7.14.0",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.1.0",
     "typescript": "^4.1.2"
   }
 }
