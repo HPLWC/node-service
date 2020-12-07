@@ -7,8 +7,8 @@
   "author": "hplwc <935151619@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "build": "tsc"
+    "start": "npx tsc && node dist/index.js",
+    "build": "npx tsc"
   },
   "dependencies": {
     "koa": "^2.13.0",
