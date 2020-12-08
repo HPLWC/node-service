@@ -8,9 +8,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx nodemon --exec ts-node src/index.ts",
+    "dev:lint": "npx nodemon -e .ts,.tsx,.js --exec yarn lint:node",
     "start": "yarn install && yarn build && node dist/index.js",
     "build": "yarn lint && npx tsc",
-    "lint": "npx eslint src --ext .ts,.tsx,.js"
+    "lint": "npx eslint src --ext .ts,.tsx,.js",
+    "lint:node": "yarn lint && ts-node src/index.ts"
   },
   "dependencies": {
     "koa": "^2.13.0",
