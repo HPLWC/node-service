@@ -38,7 +38,7 @@ class Alias {
   }
 
   private hasAliasArgs(filename: string): string | undefined {
-    return this.getAliasKeys().find(key => filename.startsWith(key))
+    return this.getAliasKeys().find(key => filename.startsWith(`${key}/`))
   }
 
 }

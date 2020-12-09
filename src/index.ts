@@ -14,5 +14,5 @@ router.get('/', async ctx => {
 app.use(router.routes())
 
 app.listen(PORT, () => {
-  console.log('port is already')
+  console.log(`port:${PORT} is already`)
 })
