@@ -1,17 +1,15 @@
 import Koa from 'koa'
-import Router from 'koa-router'
 
 import './plugins'
+import router from './api'
+
 import { PORT } from '@/utils/const'
 
 const app = new Koa()
-const router = new Router()
 
-router.get('/', async ctx => {
-  ctx.body = { res: 'hplwc', code: 200 }
-})
-
-app.use(router.routes())
+app
+  .use(router.routes())
+  .use(router.allowedMethods())
 
 app.listen(PORT, () => {
   console.log(`port:${PORT} is already`)

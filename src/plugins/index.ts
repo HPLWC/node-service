@@ -6,6 +6,5 @@ function resolve(dir: string) {
 }
 
 instance.setAlias({
-  '@': resolve('../../src'),
-  '@utils': resolve('../../src/utils')
+  '@': resolve('../../src')
 })
