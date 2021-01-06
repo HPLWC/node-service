@@ -6,9 +6,9 @@ export const PORT: number = 3344 // 项目开放端口
 export const DB_INFO = {
   port: 3306,
   username: 'root',
-  password: 'root',
-  host: '127.0.0.1',
-  database: 'learningWeb'
+  password: 'hplwc',
+  host: '120.26.162.237',
+  database: 'node-service'
 }
 
 export const STATUS_CODE: StatusCode_T[] = [
