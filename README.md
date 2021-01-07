@@ -39,4 +39,3 @@ yarn lint
 | **test**: msg | 增加测试 |
 | **chore**: msg | 构建过程或辅助工具的变动 |
 | **rm**: msg | 删除文件或代码 |
-
