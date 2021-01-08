@@ -14,7 +14,7 @@ export const connection = async(app: Koa) => {
     app.listen(PORT)
     return true
   }).catch(err => {
-    console.log('数据库连接异常', err)
+    console.error('数据库连接异常', err)
     return false
   })
 }

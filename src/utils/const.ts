@@ -8,7 +8,7 @@ export const DB_INFO = {
   username: 'root',
   password: 'hplwc',
   host: '120.26.162.237',
-  database: 'node-service'
+  database: 'node_service'
 }
 
 export const STATUS_CODE: StatusCode_T[] = [
