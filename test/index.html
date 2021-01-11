@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="file" @change="handleFileChange">
+    <button @click="uploadFile">上传</button>
+  </div>
+</body>
+</html>
+<script>
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        file: null
+      }
+    },
+    methods: {
+      handleFileChange(e) {
+        this.file = e.target.files[0]
+      },
+
+      async uploadFile() {
+        let formData = new FormData()
+        let upload = await this.file
+        formData.append('file', upload)
+
+        setTimeout(function() {
+          axios({
+            url: 'http://127.0.0.1:3344/upload/files',
+            method: 'post',
+            data: formData,
+            headers:{'Content-Type':'multipart/form-data'}
+          })
+            .then(({ data }) => {
+              console.log(data)
+            })
+        }, 3000)
+      }
+    }
+  })
+</script>

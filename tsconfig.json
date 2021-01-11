@@ -5,6 +5,7 @@
     "module": "commonjs",
     "allowJs": true,
     "lib": [
+      "es6",
       "ES2019"
     ],
     "outDir": "./dist",

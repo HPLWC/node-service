@@ -7,7 +7,7 @@ export const connection = async(app: Koa) => {
     type: 'mysql',
     ...DB_INFO,
     entities: [ // 实体
-      __dirname + '/entity/*.ts'
+      // __dirname + '/entity/*.ts'
     ]
   }).then(() => {
     console.log('数据库连接成功')
